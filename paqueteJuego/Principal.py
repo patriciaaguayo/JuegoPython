@@ -21,6 +21,7 @@ def reiniciar_puntos():
     ganados_jugador_var.set("0")
     ganados_maquina_var.set("0")
     empates_var.set("0")
+    resultado_var.set("")
 
 def determinar_ganador(opcion_jugador, opcion_maquina):
     global ganados_jugador_var, ganados_maquina_var, empates_var
@@ -269,6 +270,7 @@ Titulo.place(
 )
 
 # Cargar imagen (asegúrate de que el archivo esté en la misma carpeta o usa una ruta completa)
+
 imagen = tk.PhotoImage(file="Resources/Portada4.png")
 
 # Agregar imagen en un Label
@@ -296,61 +298,5 @@ Jugar.place(
            rely = 0.8,
            anchor = "center"
 )
-
-
-"""
-palabra = tk.StringVar(app)
-entrada = tk.StringVar(app)
-
-app.geometry("300x300")
-app.configure(background="#90d5fe")
-app.title("Juego de la muerte")
-#tk.Wm.wm_title(app, "Juego de la muerte") otra forma de ponerle el nombre a la aplicacion
-
-def saludar():
-    #mb.showinfo("Saludos", entrada.get())
-    mb.showinfo("Viaja pronto","El juego de la muerte te espera")
-
-def cambiarPalabra():
-    palabra.set("Ocupado estoy durmiendo,  " + entrada.get())
-
-
-tk.Button(
-    app,
-    text="Cambiar la palabra",
-    font=("Courier", 14),
-    bg="#f9ffa7",
-    fg="black",
-    command=cambiarPalabra
-
-).pack(
-    fill = tk.BOTH,
-    expand = True
-)
-
-tk.Label(
-    app,
-    text="Mis muertos",
-    fg="black",
-    bg="#d7cdff",
-    font=("Courier", 14),
-    justify="center",
-    textvariable=palabra
-).pack(
-    fill = tk.BOTH,
-    expand = True
-)
-
-tk.Entry(
-    fg="black",
-    bg="#90d5fe",
-    justify="center",
-    font=("Courier", 14),
-    textvariable=entrada
-).pack(
-    fill = tk.BOTH,
-    expand = True
-)
-"""
 
 app.mainloop()
