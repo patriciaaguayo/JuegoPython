@@ -150,8 +150,8 @@ def abrir_ventana_juego():
         command=lambda: reiniciar_puntos())
 
     Reiniciar.place(
-        relx = 0.98,
-        rely = 0.02,
+        relx = 0.95,
+        rely = 0.05,
         anchor = "ne"
     )
 
@@ -168,8 +168,8 @@ def abrir_ventana_juego():
         command=lambda: volver(juego))
 
     Volver.place(
-        relx = 0.02,
-        rely = 0.02,
+        relx = 0.05,
+        rely = 0.05,
         anchor = "nw"
     )
 
@@ -252,19 +252,31 @@ def volver(juego):
 
 app = tk.Tk()
 app.geometry("800x600")
-app.configure(background="#90d5fe")
-app.title("Piedra, papel, tijeras, lagarto, Spock")
+app.configure(background="#E2D8FE")
+app.title("PIEDRA, PAPEL, TIJERAS, LAGARTO, SPOCK")
 
 Titulo = tk.Label(
     app,
-    text="Piedra, papel, tijeras, lagarto, Spock",
+    text="PIEDRA, PAPEL, TIJERAS, LAGARTO, SPOCK",
     font=("Courier", 24),
-    bg="#90d5fe"
+    bg="#E2D8FE"
 )
 
 Titulo.place(
     relx = 0.5,
     rely = 0.1,
+    anchor = "center"
+)
+
+# Cargar imagen (asegúrate de que el archivo esté en la misma carpeta o usa una ruta completa)
+imagen = tk.PhotoImage(file="Resources/Portada4.png")
+
+# Agregar imagen en un Label
+etiqueta_imagen = tk.Label(app, image=imagen, bg=app.cget('bg'))
+
+etiqueta_imagen.place(
+    relx = 0.5,
+    rely = 0.43,
     anchor = "center"
 )
 
@@ -281,7 +293,7 @@ Jugar = tk.Button(
 
 Jugar.place(
            relx = 0.5,
-           rely = 0.7,
+           rely = 0.8,
            anchor = "center"
 )
 
